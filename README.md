@@ -1,6 +1,6 @@
-Terraform Cloud Repository Management Patterns
+# Terraform Cloud Repository Management Patterns
 
-Two Approaches:
+## Two Approaches:
 
 1) Mono-Repo
     Mono-Repo Patterns:
