@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "eurusvm"
+    workspaces {
+      name = "jenkins-server-us-east-1"
+    }
+  }
+
   required_providers {
     aws = {
       source = "hashicorp/aws"

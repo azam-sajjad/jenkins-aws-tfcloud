@@ -16,3 +16,4 @@ wget https://releases.hashicorp.com/terraform/1.6.5/terraform_1.6.5_linux_386.zi
 yes | sudo apt-get install unzip
 unzip 'terraform*.zip'
 sudo mv terraform /usr/local/bin/
+sudo apt-get install tomcat
