@@ -24,3 +24,7 @@ variable "SECRET_KEY" {
   type        = string
   description = "AWS Secret Key"
 }
+variable "vm_public_key" {
+  type        = string
+  description = "eurusvm-jenkinsvm public key"
+}
