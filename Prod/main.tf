@@ -23,5 +23,5 @@ module "jenkins_server" {
     subnet_id = tolist(module.networking.public_subnets)[0]
     enable_public_ip_address = true
     user_data_install_jenkins = templatefile("./jenkins_script/install.sh", {})
-    vm_public_key = templatefile("/home/azams/.ssh/vmaws.pub", {})
+    vm_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAV5L53zL23Tb8QMHpEXL+lRlXKTMFjYKjEQXtZtdy6D azam.sajjad@eurustechnologies.com"
 }
