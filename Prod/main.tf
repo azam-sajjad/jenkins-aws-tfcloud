@@ -17,7 +17,7 @@ module "jenkins_server" {
     source = "./jenkins_server"
     ami_image_owner = "099720109477"
     ami_image_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
-    tag_name = "Jenkins:TF:Ubuntu EC2"
+    tag_name = "Jenkins:TF:Ubuntu"
     instance_type = "t3.micro"
     security_group_id = [module.security_groups.jenkins_security_group_id, module.security_groups.jenkins_security_group_id_portal]
     subnet_id = tolist(module.networking.public_subnets)[0]
