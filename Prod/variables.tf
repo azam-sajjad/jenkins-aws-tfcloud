@@ -1,11 +1,11 @@
 # networking variables
-variable "vpc_cidr" {
-  type        = string
-  description = "Public Subnet CIDR Values"
-}
 variable "vpc_name" {
   type        = string
-  description = "Devops Project tr-jenkins VPC 1"
+  description = "VPC Name"
+}
+variable "vpc_cidr" {
+  type        = string
+  description = "VPC CIDR Values"
 }
 variable "public_cidr" {
   type        = list(string)
