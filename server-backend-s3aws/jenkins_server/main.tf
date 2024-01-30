@@ -6,7 +6,7 @@ variable "subnet_id"{}
 variable "security_group_id"{}
 variable "enable_public_ip_address" {}
 variable "user_data_install_jenkins" {}
-variable "vm_public_key" {}
+
 
 output "piblic_ip" {
     value = aws_instance.jenkins_server.public_ip
@@ -38,14 +38,14 @@ output "ami_id" {
   value = data.aws_ami.ubuntu_server_ami.id
 }
 
-resource "aws_key_pair" "vmaws" {
+data "aws_key_pair" "vmaws" {
   key_name   = "vmaws"
-  public_key = var.vm_public_key
+  include_public_key = true
 }
 
-output "key_name" {
-  value = aws_key_pair.vmaws.key_name
-}
+# output "key_name" {
+#   value = data.aws_key_pair.vmaws.key_name
+# }
 
 resource "aws_instance" "jenkins_server" {
     ami = data.aws_ami.ubuntu_server_ami.id
@@ -58,5 +58,5 @@ resource "aws_instance" "jenkins_server" {
         Name = var.tag_name
     }
     
-    key_name = aws_key_pair.vmaws.key_name
+    key_name = data.aws_key_pair.vmaws.key_name
 }
