@@ -43,24 +43,26 @@ Two Approaches:
                 
 2) Multi-Repo
 
-     ____REPO 1______________
-    |    APP 1              |-------Network v1.0-------Network Repo
-    |    |                  |
-    |    |_Dev              |
-    |    |_Test             |-------
-    |    |_Prod             |       |
-    |_______________________|       |
-                                    |__Security v1.0---Security Repo
+        - multi-repo with modules
 
-                                     __Security v2.0---Security Repo
-     ____REPO 2______________       |
-    |    APP 2              |       |
-    |    |                  |--------
-    |    |_Dev              |
-    |    |_Test             |
-    |    |_Prod             |--------Data v1.0---------Data Repo
-    |_______________________|
+        ____REPO 1______________
+        |    APP 1              |-------Network v1.0-------Network Repo
+        |    |                  |
+        |    |_Dev              |
+        |    |_Test             |-------
+        |    |_Prod             |       |
+        |_______________________|       |
+                                        |__Security v1.0---Security Repo
 
-    * for large teams that collaborates on complex infrastructure systems
-    * separate repos for business domain, application domain, team
-    * modules, applications within their own repositories
+                                        __Security v2.0---Security Repo
+        ____REPO 2______________       |
+        |    APP 2              |       |
+        |    |                  |--------
+        |    |_Dev              |
+        |    |_Test             |
+        |    |_Prod             |--------Data v1.0---------Data Repo
+        |_______________________|
+
+        * for large teams that collaborates on complex infrastructure systems
+        * separate repos for business domain, application domain, team
+        * modules, applications within their own repositories
