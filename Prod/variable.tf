@@ -15,3 +15,12 @@ variable "us_az" {
   type        = list(string)
   description = "Availability Zones"
 }
+
+variable "ACCESS_KEY" {
+  type        = string
+  description = "AWS Access Key"
+}
+variable "SECRET_KEY" {
+  type        = string
+  description = "AWS Secret Key"
+}

@@ -1,4 +1,14 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.34.0"
+    }
+  }
+}
+
 provider "aws" {
   region                   = "us-east-1"
-  shared_credentials_files = ["/home/azams/.aws/credentials"]
+  access_key = var.ACCESS_KEY
+  secret_key = var.SECRET_KEY 
 }
