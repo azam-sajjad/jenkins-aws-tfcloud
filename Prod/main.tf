@@ -25,3 +25,8 @@ module "jenkins_server" {
     user_data_install_jenkins = templatefile("./jenkins_script/install.sh", {})
     vm_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkVs9njSV5gQ9Dkx9cjcIfcbHChPztmHhvdXUqluNd3TBAaEL8SNGDD2lk9llnbm2XEFhp0fKYDqoFGYGxdpHeQiupR3h+dD1lFvekqTt3evz5eFEKrl/BDPgeg3NXsQyUqaytbyuK0PvOl23rflXoNHqUJNNXQzVSgGO2ssl89hBLIk+bfG09e1uJV3AeAXDQPNFKPiediFvAiBQeYhwcU25UKHuZMNm1nPrCEAqAW4HsDi503FYAECzJDSvNqYqrbhMjmiVi9AbqLjUMEPUbTQECwrmnm7+6b3/SOB1Whtgi7nAZ8sZ1M5F38QFaM25nbPymRJvcA9hnG8zXaGQYKq7K52C0DiJXkOaxtvrFI7J73w9+/4oz8sELkysOhHMOPEhzSbYdAGi97djzcz3FEjDbZ6HGebAUzP6dzlkwo0uHtEMR39rbDaW/NzTJ9sSjA/CnIH3AjqQqPy91jxzrR/PkZGvO+Quyh78HZ5gVV6gjwoQ1VnPJtLZmXoSz3z8= azams@eurusvm"
 }
+
+
+output "ssh_connection_string" {
+    value = "${module.jenkins_server.ssh_connection_string}"
+}
